@@ -1,0 +1,4 @@
+# Dreamhost location block for handling Let's Encrypt ACME challenges
+location /.well-known/acme-challenge/ {
+	autoindex off; # aint no peepin in here
+}

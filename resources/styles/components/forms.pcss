@@ -1,0 +1,30 @@
+@layer base {
+
+}
+.gform_wrapper {
+    p.gform_required_legend {
+      @apply !hidden;
+    }
+    form {
+        input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="color"], input[type="checkbox"], input[type="radio"], input[type="file"], input[type="hidden"], select, textarea {
+            @apply w-full px-4 py-2 border border-gray-300 rounded-lg;
+        }
+        input[type="submit"] {
+            @apply rounded-full text-white px-6 py-2 bg-blue-dark;
+        &:hover {
+            @apply bg-blue-dark;
+        }
+        }
+    }
+  }
+  .content-gating {
+@apply p-4 shadow-2xl bg-white rounded-lg;
+h3 {
+    @apply text-center mb-4;
+}
+  }
+  @screen lg {
+    .content-gating {
+      @apply p-8;
+    }
+  }

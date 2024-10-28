@@ -1,0 +1,141 @@
+@layer base {
+  body header {
+    .menu-header-menu-container {
+      @apply flex justify-end;
+    }
+
+  }
+
+
+  header.active {
+    @apply shadow-xl;
+  }
+  header .navbar-nav {
+    @apply items-center flex-nowrap flex flex-col justify-start px-4 space-y-2;
+    li {
+      @apply w-full
+    }
+    li.contact-btn {
+      @apply bg-blue-main  rounded-full py-0 transition duration-300;
+      a {
+        @apply !px-6 text-sm !py-2 flex ;
+      }
+      &:hover {
+        @apply bg-blue-dark;
+        a {
+          @apply !text-white;
+        }
+      }
+    }
+    li.depth-0 > a {
+      @apply text-blue-dark font-bold block py-2;
+    }
+    li > a:hover {
+      @apply text-blue-main;
+    }
+    li.depth-0.menu-item-has-children {
+      @apply pr-2;
+      &:before {
+        @apply content-[''] absolute  w-2 h-2 border-b-2 border-r-2 border-current pointer-events-none transition-all duration-100 ease-in-out top-4 right-0 rotate-45;
+      }
+      @apply relative;
+      &:not(.open) > ul {
+        @apply hidden opacity-0 pointer-events-none transition-all duration-300 ease-in-out top-[100%];
+        visibility: hidden;
+      }
+      &.open:before {
+        @apply -rotate-[135deg];
+      }
+      &.open > ul {
+        @apply block text-blue-dark space-y-1 bg-white left-0 z-50 transition-all duration-300 ease-in-out;
+        pointer-events: all;
+        visibility: visible;
+        opacity: 1;
+
+      }
+    }
+  }
+  li#menu-item-83 > ul {
+    @apply columns-2;
+  }
+  @screen lg {
+    body header.active {
+      @apply bg-white;
+      button#search-btn {
+        @apply text-blue-dark;
+      }
+      nav li.depth-0 > a,
+      nav li.depth-0:before {
+        @apply text-blue-dark;
+      }
+    }
+    body.home header:not(.active) {
+      a .w-12.h-12 {
+        @apply !opacity-0;
+      }
+      a svg:not(#Layer_1) g path {
+        @apply !fill-white;
+      }
+      li.depth-0 > a {
+        @apply text-white;
+      }
+      button#search-btn {
+        @apply text-white;
+      }
+    }
+    body header:not(.active) {
+      @apply bg-transparent;
+      button#search-btn:hover {
+        @apply text-blue;
+      }
+      button.hamburger {
+        @apply text-white;
+      }
+      button#search-btn {
+        @apply text-blue-dark;
+      }
+
+      nav li.depth-0 > a,
+      nav li.depth-0:before {
+        @apply text-blue-dark;
+      }
+      nav li.depth-0:hover > a,
+      nav li.depth-0:hover:before {
+        @apply text-blue;
+      }
+    }
+    .menu-item-has-children.open > ul    >     li > a {
+      @apply px-2;
+    }
+    header .navbar-nav {
+      @apply flex flex-row  px-0 space-y-0 items-center flex-nowrap justify-end space-x-6;
+      li.depth-0 > a {
+        @apply px-2 py-4 whitespace-nowrap;
+      }
+      li#menu-item-83 > ul {
+        @apply columns-2 py-4 left-0;
+      }
+      li.depth-0.menu-item-has-children {
+        &:before {
+          @apply top-1/2 -translate-y-1/2;
+        }
+        &.open > ul {
+          @apply absolute top-[120%] p-2 rounded-lg shadow-lg;
+          li > a {
+            @apply px-4;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+  /* body:not(.home) header {
+    @apply bg-blue-50;
+    &:.active {
+      @apply bg-white;
+    }
+  } */

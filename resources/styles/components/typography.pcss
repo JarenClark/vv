@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: 'THICCCBOI';
+  src: url('../fonts/THICCCBOI/THICCCBOI-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'THICCCBOI';
+  src: url('../fonts/THICCCBOI/THICCCBOI-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'THICCCBOI';
+  src: url('../fonts/THICCCBOI/THICCCBOI-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'THICCCBOI';
+  src: url('../fonts/THICCCBOI/THICCCBOI-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@layer base {
+  body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #313e3b;
+    @apply text-blue-900;
+  }
+  a {
+    text-decoration: unset !important;
+    transition: all 0.3s;
+  }
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* @apply font-sans text-blue-900; */
+
+    font-family: 'THICCCBOI', sans-serif;
+    //font-family: "Work Sans", sans-serif;
+    line-height: 1.2;
+    //letter-spacing: -0.01rem;
+    --tw-text-opacity: 1;
+    //word-spacing: 0.1rem;
+font-weight: 600!important;
+    @apply text-blue-dark;
+  }
+  p b, p strong {
+    @apply text-blue-dark;
+  }
+  h1, .h1 {
+    @apply mb-6 text-4xl text-left leading-[1.2] tracking-[-2px];
+    /* font-size: calc(1.365rem + 1.38vw); */
+  }
+  h2, .h2 {
+    @apply text-2xl;
+  }
+  h3, .h3 {
+    @apply text-2xl;
+  }
+  .richtext {
+    @apply prose;
+  }
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  .richtext,
+  .prose {
+    p + p, p + h3, p + ul {
+      margin-top: 1.5rem;
+    }
+    p {
+      @apply leading-relaxed max-w-3xl;
+    }
+    ul {
+      @apply list-disc pl-6;
+    }
+    ol {
+      @apply list-decimal pl-6;
+    }
+  }
+  @screen lg {
+    h1, .h1 {
+      @apply text-6xl leading-[1.1]
+    }
+    h2, .h2 {
+      @apply text-4xl;
+    }
+    h4 {
+      @apply text-lg;
+    }
+    .richtext,
+    .prose {
+      p,
+      li {
+        @apply text-lg;
+      }
+    }
+  }
+}
