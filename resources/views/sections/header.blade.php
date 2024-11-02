@@ -20,7 +20,8 @@
             <div class="flex items-center  justify-between">
 
                 <a href="/" class="py-4 flex items-center z-[40] space-x-1 relative">
-                    <div class="w-12 h-12 opacity-100 transition duration-200" style="overflow: hidden; background-image: url(@asset('/images/logos/tpa.svg'))">
+                    <div class="w-12 h-12 opacity-100 transition duration-200"
+                        style="overflow: hidden; background-image: url(@asset('/images/logos/tpa.svg'))">
                         {{-- @include('icons.tpa-logo') --}}
                     </div>
                     @include('icons.logo')
@@ -40,6 +41,20 @@
                                     'menu_class' => 'navbar-nav nav nav-primary',
                                     'walker' => new \App\nav_walker(),
                                 ]) !!}
+                                {{-- login/ logout --}}
+                                
+                                    @if (is_user_logged_in())
+                                    {{-- <a href="/membership-account" style="cursor: pointer;" class="hidden bg-blue-main cursor-pointer font-semibold hover:bg-blue-dark hover:text-white leading-6 px-6 py-1 rounded-[10px] text-center text-sm text-white mx-4 lg:mr-0">
+                                        My Account    </a> --}}
+
+                                        <a href="/membership-account" style="cursor: pointer;" class="bg-blue-main cursor-pointer font-semibold hover:bg-blue-dark hover:text-white leading-6  px-6 py-3 lg:py-1 rounded-[10px] text-center text-sm text-white mx-4 lg:mr-0">
+                                            My Account    </a>
+                                    @else
+                                    <a href="/login" style="cursor: pointer;" class="bg-blue-main cursor-pointer font-semibold hover:bg-blue-dark hover:text-white leading-6  px-6 py-3 lg:py-1 rounded-[10px] text-center text-sm text-white mx-4 lg:mr-0">
+                                        Login    </a>
+                             
+                                    @endif
+                                
                             </div>
                             <ul class="flex flex-col lg:hidden space-y-2 p-4 mb-8">
                                 <li>
@@ -81,4 +96,11 @@
     </div>
 </header>
 
-<script></script>
+<style>
+    @media(min-width: 1024px) {
+        .lg\:py-1 {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+    }
+</style>
