@@ -2,7 +2,12 @@
     {{-- && has_term('','grade-level', get_the_ID()) --}}
     @php($virtue = get_the_terms(get_the_ID(), 'virtue')[0])
     @php($grade_level = get_the_terms(get_the_ID(), 'grade-level')[0])
+    @if (get_post_type() == 'story')
     @php($story_id = get_the_ID())
+@elseif(get_field('story', get_the_ID()))
+    @php($story = get_field('story', get_the_ID()))
+    @php($story_id = $story->ID)
+@endif
     @query([
         'post_type' => 'story',
         'posts_per_page' => 3,
