@@ -65,4 +65,13 @@
             @endif
         </div>
     </div>
+
+{{-- Amazon Disclaimer --}}
+@if (get_field('purchase_link', $story_id))
+<p class="text-center my-4">
+	<i>* As an Amazon Associate, Values and Virtues earns from qualifying purchases from our links.</i>
+</p>
+@endif
+
+
 @endif
