@@ -7,7 +7,7 @@
             <span class="block w-3 h-3">
                 @include('icons.external-link', ['class' => 'w-3 h-3'])
             </span>
-
+*
         </a>
     </p>
 @endif
