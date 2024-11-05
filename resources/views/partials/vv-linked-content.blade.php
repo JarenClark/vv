@@ -39,7 +39,7 @@
     <div class="container">
 
         <div
-            class="mx-auto w-full max-w-[48rem] mt-8 lg:mt-16 flex flex-col md:flex-row mb-8 lg:mb-16  space-y-2 md:space-y-0 md:space-x-4">
+            class="mx-auto w-full max-w-[48rem] mt-8 lg:mt-16 flex flex-col md:flex-row md:justify-center mb-8 lg:mb-16  space-y-2 md:space-y-0 md:space-x-4">
             @php($idx = 0)
             @if (get_post_type() != 'story')
                 <x-button-link link="{{ get_permalink($story_id) }}" class="{!! $btn_classes[$idx] !!}">
