@@ -1,0 +1,58 @@
+.navbar {
+  @apply relative flex flex-wrap items-center justify-between p-0 text-[#343f52];
+}
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  @apply flex items-center justify-between;
+  flex-wrap: inherit;
+}
+.navbar-brand {
+  @apply py-0 mr-0 text-[0.7rem] text-[#3f78e0] whitespace-nowrap;
+}
+.navbar-brand:focus,
+.navbar-brand:hover {
+  @apply text-[#3f78e0];
+}
+.navbar-nav {
+  @apply text-[0.8rem] font-bold text-[#343f52] p-0 flex flex-col mb-0 list-none;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  @apply text-[#3f78e0];
+}
+.navbar-nav .dropdown-menu {
+  @apply static;
+}
+.navbar-collapse {
+  @apply basis-full grow items-center;
+}
+.navbar-toggler {
+  @apply py-[0.25rem] px-[0.75rem] text-[1rem] leading-none text-[#343f52] bg-transparent border-[1px] border-[transparent] rounded-[0.4rem] transition-[box-shadow_0.15s_ease-in-out] border-solid motion-reduce:transition-none hover:no-underline focus:no-underline focus:shadow-[0_0_0_0.25rem];
+}
+.navbar-toggler:focus {
+  outline: 0;
+}
+.navbar-dark,
+.navbar[data-bs-theme='dark'] {
+}
+.navbar-dark,
+.navbar[data-bs-theme='dark'] {
+  @apply text-white hover:text-[rgba(255,255,255,0.7)]
+        disabled:text-[rgba(255,255,255,0.25)]
+        active:text-[rgba(255,255,255,0.7)];
+}
+.navbar-dark .nav-link {
+  @apply text-white hover:text-[rgba(255,255,255,0.7)] focus:text-[rgba(255,255,255,0.7)];
+}
+
+/**
+*Typography
+**/
+.fs-66 {
+  font-size: calc(1.455rem + 2.46vw) !important;
+}
