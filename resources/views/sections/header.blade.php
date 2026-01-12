@@ -44,10 +44,10 @@
                                 
                                     @if (is_user_logged_in())
                             
-                                        <a href="/membership-account/" style="cursor: pointer;" class="bg-blue-main cursor-pointer font-semibold hover:bg-blue-dark hover:text-white leading-6  px-6 py-1 rounded-[10px] text-center text-sm text-white mx-4 lg:mr-0">
+                                        <a href="/membership-account/" style="cursor: pointer;" class="bg-blue-main cursor-pointer font-semibold hover:bg-blue-dark hover:text-white leading-6 mt-3 lg:mt-0 px-6 py-2 rounded-[10px] text-center text-sm text-white mx-4 lg:mr-0">
                                             My Account    </a>
                                     @else
-                                    <a href="/login/" style="cursor: pointer;white-space: nowrap;" class="bg-blue-main cursor-pointer font-semibold hover:bg-blue-dark hover:text-white leading-6  px-6 py-1 rounded-[10px] text-center text-sm text-white mx-4 lg:mr-0">
+                                    <a href="/login/" style="cursor: pointer;white-space: nowrap;" class="bg-blue-main cursor-pointer font-semibold hover:bg-blue-dark hover:text-white leading-6 mt-3 lg:mt-0 px-6 py-2 rounded-[10px] text-center text-sm text-white mx-4 lg:mr-0">
                                         Sign Up / Login    </a>
                              
                                     @endif

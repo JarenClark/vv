@@ -30,6 +30,9 @@
         @php($pts = ['story', 'companion-content', 'activity'])
         <main id="main" class="main min-h-[80vh] ">
             @yield('content')
+
+
+
         </main>
 
         @hasSection('sidebar')
@@ -38,6 +41,7 @@
             </aside>
         @endif
 
+        @include('partials.login-button')
         @include('sections.footer')
     </div>
 

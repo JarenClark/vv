@@ -49,7 +49,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('http://values-virtues.local/')
+    .setProxyUrl('http://valuesandvirtues.local/')
     .watch(['resources/views', 'app']);
 
     
