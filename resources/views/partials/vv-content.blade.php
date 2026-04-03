@@ -19,7 +19,9 @@
                         class="w-full object-cover ">
                 </div>
                 @endif
+
             @endif
+
         </div>
         <div class="prose mx-auto w-full max-w-[48rem]">
             @php(the_content())

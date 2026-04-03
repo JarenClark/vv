@@ -81,6 +81,15 @@
                     ])
                 </div>
             @endif
+            @if(get_field('resource', get_the_ID()))
+            <div class="flex items-center justify-center mb-4">
+                <a href="{!! esc_attr(get_field('resource', get_the_ID())) !!}" target="_blank" class="flex items-center space-x-2">
+                    <h4>View Resource</h4>
+                    <span>@include('icons.external-link')</span>
+                </a>
+
+            </div>
+        @endif
         </div>
 
     </div>

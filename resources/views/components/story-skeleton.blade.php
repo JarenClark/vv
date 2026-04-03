@@ -17,7 +17,7 @@
 
 {{-- <x-hero label="{!! $labels->singular_name ?? null !!}"></x-hero> --}}
 
-<section class="py-20 relative lg:pt-32 ">
+<section class="py-20 relative lg:pt-32 abc123">
     <style>
         .order-1 {
             order: 1;
