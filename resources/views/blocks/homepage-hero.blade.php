@@ -17,6 +17,9 @@
 HERO
 
 --}}
+<script>
+console.log('2f90062d')
+</script>
 <section class="relative  lg:min-h-[90vh] overflow-hidden flex flex-col justify-end">
     <div class="absolute inset-0 bg-cover bg-center lg:bg-right"
         style="background-image: url(/wp-content/uploads/2024/08/output-onlinetools-1.png)">
@@ -25,7 +28,7 @@ HERO
     <div class="absolute inset-0  bg-blue-dark/40 block md:hidden"></div>
     <div class="container  pt-40 pb-24 lg:py-48 lg:pb-64 relative">
 <div class="block md:hidden">
-    <h1 class="text-white">Helping students <i>know</i> the good, <i>choose</i> the good, and <i>desire</i> the&nbsp;good.</h1>
+    <h1 class="text-white">Helping students <i>know</i> the good, <i>desire</i> the good, and <i>choose</i> the&nbsp;good.</h1>
 </div>
         <div class="hidden md:block">
     <div class="h1 leading-normal text-white mb-0">Helping students

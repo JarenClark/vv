@@ -39,7 +39,19 @@
                 <div class="text-sm">{!! $level->name !!}</div>
 @endif
 @endforeach
+
+
+@elseif(has_term('', 'grade-level'))
+
+@php($levels = get_the_terms(get_the_ID(), 'grade-level'))
+@foreach($levels as $level)
+@if($loop->first)
+                <div class="text-sm">{!! $level->name !!}</div>
+@endif
+@endforeach
+
             @else
+            
                 <div class="text-sm">@published('F, Y')</div>
             @endif
 
