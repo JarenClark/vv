@@ -81,13 +81,23 @@
                     ])
                 </div>
             @endif
-            @if(get_field('resource', get_the_ID()))
+            <?php
+            $resource = get_field('resource', get_the_ID());
+            $embed = $resource ? wp_oembed_get($resource) : false;
+        ?>
+        
+        @if($resource)
             <div class="flex items-center justify-center mb-4">
-                <a href="{!! esc_attr(get_field('resource', get_the_ID())) !!}" target="_blank" class="flex items-center space-x-2">
-                    <h4>View Resource</h4>
-                    <span>@include('icons.external-link')</span>
-                </a>
-
+                @if($embed)
+                    <div class="w-full">
+                        {!! $embed !!}
+                    </div>
+                @else
+                    <a href="{!! esc_url($resource) !!}" target="_blank" class="flex items-center space-x-2">
+                        <h4>View Resource</h4>
+                        <span>@include('icons.external-link')</span>
+                    </a>
+                @endif
             </div>
         @endif
         </div>
